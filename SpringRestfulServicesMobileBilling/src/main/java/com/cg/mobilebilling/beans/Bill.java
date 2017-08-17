@@ -70,6 +70,10 @@ public class Bill {
 		this.gst = gst;
 	}
 
+	public Bill(int i) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getBillID() {
 		return billID;
 	}

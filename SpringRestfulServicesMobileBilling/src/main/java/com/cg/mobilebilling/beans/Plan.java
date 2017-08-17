@@ -36,6 +36,10 @@ public class Plan {
 		this.planName = planName;
 	}
 	
+	public Plan(int i) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getPlanID() {
 		return planID;
 	}

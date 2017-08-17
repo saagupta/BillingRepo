@@ -63,7 +63,9 @@ public interface BillingServices {
 	
 	PostpaidAccount getCustomerPostPaidAccountPlanDetails(int customerID, long mobileNo) 
 			throws CustomerDetailsNotFoundException, PostpaidAccountNotFoundException, 
-			BillingServicesDownException, PlanDetailsNotFoundException ;
+			BillingServicesDownException ;
 	
 	StandardPlan getsPlan(int planID) ;
+	
+	public long generateUniqueMobileNo();
 }

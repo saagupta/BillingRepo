@@ -25,6 +25,10 @@ public class BillingServicesImpl implements BillingServices {
 	@Autowired
 	BillingDAOServices dao;
 
+	public BillingServicesImpl(BillingDAOServices billingDaoServices) {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public List<StandardPlan> getPlanAllDetails() throws BillingServicesDownException {
 		return dao.getAllPlans();
@@ -138,8 +142,8 @@ public class BillingServicesImpl implements BillingServices {
 
 	@Override
 	public PostpaidAccount getCustomerPostPaidAccountPlanDetails(int customerID, long mobileNo)
-			throws CustomerDetailsNotFoundException, PostpaidAccountNotFoundException, BillingServicesDownException,
-			PlanDetailsNotFoundException {
+			throws CustomerDetailsNotFoundException, PostpaidAccountNotFoundException, BillingServicesDownException
+			 {
 		return dao.getCustomerPostPaidAccount(customerID, mobileNo);
 	}
 
@@ -153,6 +157,7 @@ public class BillingServicesImpl implements BillingServices {
 		return dao.getsPlan(planID);
 	}
 	
+	@Override
 	public long generateUniqueMobileNo() {
 		long tempMobNo= (long) (Math.random()*1000000000);
 		String var= "9000000000";

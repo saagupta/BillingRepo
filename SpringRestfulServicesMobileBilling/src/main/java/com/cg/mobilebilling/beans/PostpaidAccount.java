@@ -41,6 +41,10 @@ public class PostpaidAccount {
 		this.bills = bills;
 	}
 	
+	public PostpaidAccount(int i) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public long getMobileNo() {
 		return mobileNo;
 	}
